@@ -6,6 +6,7 @@
 3. [scratchpad](https://dwm.suckless.org/patches/scratchpad/) patch for scratchpad
 4. [bar height](https://dwm.suckless.org/patches/bar_height/) for changing bar's height
 5. [pertag](https://dwm.suckless.org/patches/pertag/) for layout for each tag.
-6. [swallow](https://dwm.suckless.org/patches/swallow/) patch for swallowing windows (have reversed the patch right now.)
+6. [layoutscroll](https://dwm.suckless.org/patches/layoutscroll/) for scrolling through layouts with ``mod+shift+tab``
+7. [swallow](https://dwm.suckless.org/patches/swallow/) patch for swallowing windows (have reversed the patch right now.)
 
 ### MAKE SURE TO INSTALL ``libxft-bgra`` OR DWM WILL CRASH
