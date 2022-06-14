@@ -9,8 +9,6 @@
 6. [layoutscroll](https://dwm.suckless.org/patches/layoutscroll/) for scrolling through layouts with ``mod+shift+tab``
 7. [swallow](https://dwm.suckless.org/patches/swallow/) patch for swallowing windows (have reversed the patch right now.)
 
-### MAKE SURE TO INSTALL ``libxft-bgra`` OR DWM WILL CRASH
-
 ## Keybinds
 |keybinds|what it does|
 |:-------|:-----------|
@@ -31,3 +29,5 @@
 |``mod+space``|floating mode|
 |``mod+(+/-/=)``|increase/decrease/reset gaps|
 |``mod+shit+q``|quit dwm|
+
+### MAKE SURE TO INSTALL ``libxft-bgra`` OR DWM WILL CRASH
