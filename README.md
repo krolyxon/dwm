@@ -10,7 +10,7 @@
 7. [swallow](https://dwm.suckless.org/patches/swallow/) patch for swallowing windows (have reversed the patch right now.)
 
 ## Keybinds
-|keybinds|what it does|
+|keybinds|what they do|
 |:-------|:-----------|
 |``mod+enter``|open terminal(st)|
 |``mod+shift+enter``|open scratchpad(st)|
