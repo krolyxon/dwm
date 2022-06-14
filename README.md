@@ -10,3 +10,24 @@
 7. [swallow](https://dwm.suckless.org/patches/swallow/) patch for swallowing windows (have reversed the patch right now.)
 
 ### MAKE SURE TO INSTALL ``libxft-bgra`` OR DWM WILL CRASH
+
+## Keybinds
+|keybinds|what it does|
+|:-------|:-----------|
+|``mod+enter``|open terminal(st)|
+|``mod+shift+enter``|open scratchpad(st)|
+|``mod+r``|open dmenu|
+|``mod+shift+x``|kill window|
+|``mod+Tab``|cycle through windows|
+|``mod+b``|toggle statusbar|
+|``mod+F5``|xrdb|
+|``mod+h/l``|resize windows horizontally|
+|``mod+f``|move the focused window to master|
+|``mod+shift+r``|toggle window floating|
+|``mod+t``|tile layout(default)|
+|``mod+m``|monacle layout|
+|``mod+e``|spiral layout|
+|``mod+n``|dwindle layout|
+|``mod+space``|floating mode|
+|``mod+(+/-/=)``|increase/decrease/reset gaps|
+|``mod+shit+q``|quit dwm|
