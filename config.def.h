@@ -9,12 +9,12 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh            = 17;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const char *fonts[]          = { "Hack Nerd Fonts:size=11", "FontAwesome:size=10", "JoyPixels:pixelsize=11:antialias=true:autohint=true" };
 
-static char normbgcolor[]           = "#282828";
-static char normbordercolor[]       = "#3c3836";
-static char normfgcolor[]           = "#a89984";
-static char selfgcolor[]            = "#282828";
-static char selbordercolor[]        = "#a89984";
-static char selbgcolor[]            = "#D4A356";
+static char normbgcolor[]           = "#222222";
+static char normbordercolor[]       = "#444444";
+static char normfgcolor[]           = "#bbbbbb";
+static char selfgcolor[]            = "#eeeeee";
+static char selbordercolor[]        = "#222222";
+static char selbgcolor[]            = "#005577";
 static char *colors[][3] = {
 /*               fg           bg           border   */
 [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
