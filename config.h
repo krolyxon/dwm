@@ -7,7 +7,7 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh            = 17;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
-static const char *fonts[]          = { "JetBrains Mono:size=11", "FontAwesome:size=10", "NotoColorEmoji:pixelsize=11:antialias=true:autohint=true" };
+static const char *fonts[]          = { "JetBrainsMono Nerd Font:size=11", "FontAwesome:size=10", "NotoColorEmoji:pixelsize=11:antialias=true:autohint=true" };
 
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
@@ -22,7 +22,7 @@ static char *colors[][3] = {
 };
 /* tagging */
 //static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
-static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
+static const char *tags[] = { " ", " ", " ", " ", " ", " ", " ", " ", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
