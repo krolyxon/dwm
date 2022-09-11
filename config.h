@@ -92,7 +92,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_space,      zoom,           {0} },
     /* { MODKEY,                       XK_Tab,    view,           {0} }, */
 	{ MODKEY|ShiftMask,             XK_x,      killclient,     {0} },
-	{ MODKEY,			XK_b,      spawn,          {.v = (const char*[]){ BROWSER, NULL } } },
+	{ MODKEY,			XK_w,      spawn,          {.v = (const char*[]){ BROWSER, NULL } } },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} }, // tile
 	{ MODKEY|ShiftMask,             XK_u,      setlayout,      {.v = &layouts[1]} }, // monocle
 	{ MODKEY,                       XK_y,      setlayout,      {.v = &layouts[2]} }, // spiral
