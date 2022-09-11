@@ -1,5 +1,9 @@
 /* See LICENSE file for copyright and license details. */
 
+/* Constants */
+#define BROWSER "firefox"
+#define TERMINAL "st"
+
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int gappx     = 3;        /* gaps between windows */
@@ -68,8 +72,11 @@ static const char *termcmd[]  = { "st", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 
+#include <X11/XF86keysym.h> // this is to support XF86 keys
+
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ MODKEY,			XK_grave,  spawn,	   {.v = (const char*[]){ "unicode_emoji", NULL } } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_Return, togglescratch,  {.v = scratchpadcmd } },
@@ -85,10 +92,11 @@ static Key keys[] = {
 	{ MODKEY,                       XK_space,      zoom,           {0} },
     /* { MODKEY,                       XK_Tab,    view,           {0} }, */
 	{ MODKEY|ShiftMask,             XK_x,      killclient,     {0} },
-	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[1]} },
-	{ MODKEY,                       XK_e,      setlayout,      {.v = &layouts[2]} },
-	{ MODKEY,                       XK_n,      setlayout,      {.v = &layouts[3]} },
+	{ MODKEY,			XK_b,      spawn,          {.v = (const char*[]){ BROWSER, NULL } } },
+	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} }, // tile
+	{ MODKEY|ShiftMask,             XK_u,      setlayout,      {.v = &layouts[1]} }, // monocle
+	{ MODKEY,                       XK_y,      setlayout,      {.v = &layouts[2]} }, // spiral
+	{ MODKEY|ShiftMask,             XK_y,      setlayout,      {.v = &layouts[3]} }, // dwindle
 	{ MODKEY|ShiftMask,             XK_f,      setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_r,      togglefloating, {0} },
 	{ MODKEY,                       XK_f,      togglefullscr,  {0} },
@@ -113,6 +121,12 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+        { 0,				XK_Print,	spawn,		SHCMD("maimshot") },
+        { MODKEY,			XK_m,		spawn,		{.v = (const char*[]){ TERMINAL, "-e", "ncmpcpp", NULL } } },
+
+	{ 0, XF86XK_AudioMute,		spawn,		SHCMD("pamixer -t; kill -34 $(cat ~/.cache/pidofbar") },
+	{ 0, XF86XK_AudioRaiseVolume,	spawn,		SHCMD("pamixer -i 2; kill -34 $(cat ~/.cache/pidofbar)") },
+	{ 0, XF86XK_AudioLowerVolume,	spawn,		SHCMD("pamixer -d 2; kill -34 $(cat ~/.cache/pidofbar)") },
 };
 
 /* button definitions */
