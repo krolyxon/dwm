@@ -20,13 +20,14 @@
 |<kbd>mod+b</kbd>|toggle statusbar|
 |<kbd>mod+F5</kbd>|xrdb|
 |<kbd>mod+h/l</kbd>|resize windows horizontally|
-|<kbd>mod+f</kbd>|move the focused window to master|
+|<kbd>mod+space</kbd>|move the focused window to master|
+|<kbd>mod+f</kbd>|toggle window fullscreen|
 |<kbd>mod+shift+r</kbd>|toggle window floating|
 |<kbd>mod+t</kbd>|tile layout(default)|
-|<kbd>mod+m</kbd>|monacle layout|
-|<kbd>mod+e</kbd>|spiral layout|
-|<kbd>mod+n</kbd>|dwindle layout|
-|<kbd>mod+space</kbd>|floating mode|
+|<kbd>mod+shift+u</kbd>|monacle layout|
+|<kbd>mod+y</kbd>|spiral layout|
+|<kbd>mod+shift+y</kbd>|dwindle layout|
+|<kbd>mod+shift+f</kbd>|floating mode|
 |<kbd>mod+(+/-/=)</kbd>|increase/decrease/reset gaps|
 |<kbd>mod+shit+q</kbd>|quit dwm|
 

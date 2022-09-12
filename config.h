@@ -97,7 +97,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_u,      setlayout,      {.v = &layouts[1]} }, // monocle
 	{ MODKEY,                       XK_y,      setlayout,      {.v = &layouts[2]} }, // spiral
 	{ MODKEY|ShiftMask,             XK_y,      setlayout,      {.v = &layouts[3]} }, // dwindle
-	{ MODKEY|ShiftMask,             XK_f,      setlayout,      {0} },
+        { MODKEY|ShiftMask,		XK_f,	   setlayout,	   {.v = &layouts[4]} },
 	{ MODKEY|ShiftMask,             XK_r,      togglefloating, {0} },
 	{ MODKEY,                       XK_f,      togglefullscr,  {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
