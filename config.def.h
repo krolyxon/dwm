@@ -119,10 +119,10 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-        { 0,				XK_Print,	spawn,		SHCMD("maimshot") },
-        { MODKEY,			XK_m,		spawn,		{.v = (const char*[]){ TERMINAL, "-e", "ncmpcpp", NULL } } },
-
+	{ MODKEY|ShiftMask,             XK_q,           quit,      {0} },
+        { 0,				XK_Print,	spawn,	   SHCMD("maimshot") },
+	{ MODKEY,	        	XK_Escape,	spawn,	   SHCMD("system_action") },
+        { MODKEY,			XK_m,		spawn,     {.v = (const char*[]){ TERMINAL, "-e", "ncmpcpp", NULL } } },
 	{ 0, XF86XK_AudioMute,		spawn,		SHCMD("pamixer -t; kill -34 $(cat ~/.cache/pidofbar") },
 	{ 0, XF86XK_AudioRaiseVolume,	spawn,		SHCMD("pamixer -i 2; kill -34 $(cat ~/.cache/pidofbar)") },
 	{ 0, XF86XK_AudioLowerVolume,	spawn,		SHCMD("pamixer -d 2; kill -34 $(cat ~/.cache/pidofbar)") },
