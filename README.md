@@ -30,5 +30,3 @@
 |<kbd>mod+shift+f</kbd>|floating mode|
 |<kbd>mod+(+/-/=)</kbd>|increase/decrease/reset gaps|
 |<kbd>mod+shit+q</kbd>|quit dwm|
-
-### MAKE SURE TO INSTALL ``libxft-bgra`` OR DWM WILL CRASH
