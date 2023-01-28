@@ -16,8 +16,9 @@
 |<kbd>mod+shift+enter</kbd>|open scratchpad(st)|
 |<kbd>mod+r</kbd>|open dmenu|
 |<kbd>mod+shift+x</kbd>|kill window|
-|<kbd>mod+Tab</kbd>|cycle through windows|
-|<kbd>mod+b</kbd>|toggle statusbar|
+| <kbd>mod+Tab</kbd> | cycle through windows |
+| <kbd>mod+b</kbd>   | toggle statusbar      |
+| <kbd>mod+p</kbd>   | mpc toggle            |
 |<kbd>mod+F5</kbd>|xrdb|
 |<kbd>mod+h/l</kbd>|resize windows horizontally|
 |<kbd>mod+space</kbd>|move the focused window to master|

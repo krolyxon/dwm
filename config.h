@@ -126,6 +126,7 @@ static Key keys[] = {
 	{ 0, XF86XK_AudioMute,		spawn,		SHCMD("pamixer -t; kill -34 $(cat ~/.cache/pidofbar") },
 	{ 0, XF86XK_AudioRaiseVolume,	spawn,		SHCMD("pamixer -i 2; kill -34 $(cat ~/.cache/pidofbar)") },
 	{ 0, XF86XK_AudioLowerVolume,	spawn,		SHCMD("pamixer -d 2; kill -34 $(cat ~/.cache/pidofbar)") },
+        { MODKEY,			XK_p,			spawn,		{.v = (const char*[]){ "mpc", "toggle", NULL } } },
 };
 
 /* button definitions */
