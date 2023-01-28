@@ -101,10 +101,10 @@ static Key keys[] = {
 	{ MODKEY,                       XK_f,      togglefullscr,  {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
-	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
-	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+	{ MODKEY,                       XK_Left,  focusmon,       {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_Left,  tagmon,         {.i = -1 } },
+	{ MODKEY,                       XK_Right, focusmon,       {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_Right, tagmon,         {.i = +1 } },
 	// { MODKEY|ShiftMask,             XK_h,      layoutscroll,   {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_Tab,      layoutscroll,   {.i = +1 } },
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
@@ -126,7 +126,12 @@ static Key keys[] = {
 	{ 0, XF86XK_AudioMute,		spawn,		SHCMD("pamixer -t; kill -34 $(cat ~/.cache/pidofbar") },
 	{ 0, XF86XK_AudioRaiseVolume,	spawn,		SHCMD("pamixer -i 2; kill -34 $(cat ~/.cache/pidofbar)") },
 	{ 0, XF86XK_AudioLowerVolume,	spawn,		SHCMD("pamixer -d 2; kill -34 $(cat ~/.cache/pidofbar)") },
-        { MODKEY,			XK_p,			spawn,		{.v = (const char*[]){ "mpc", "toggle", NULL } } },
+
+        { MODKEY,			XK_p,		spawn,		{.v = (const char*[]){ "mpc", "toggle", NULL } } },	
+        { MODKEY|ShiftMask,		XK_comma,	spawn,		{.v = (const char*[]){ "mpc", "prev", NULL } } },
+	{ MODKEY|ShiftMask,		XK_period,	spawn,		{.v = (const char*[]){ "mpc", "next", NULL } } },
+	{ MODKEY,                       XK_comma,	spawn,		{.v = (const char*[]){ "mpc", "seek", "-10", NULL } } },
+	{ MODKEY,               	XK_period,	spawn,		{.v = (const char*[]){ "mpc", "seek", "+10", NULL } } },
 };
 
 /* button definitions */
