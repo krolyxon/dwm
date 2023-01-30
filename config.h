@@ -127,7 +127,7 @@ static Key keys[] = {
 	{ 0, XF86XK_AudioRaiseVolume,	spawn,		SHCMD("pamixer -i 2; kill -34 $(cat ~/.cache/pidofbar)") },
 	{ 0, XF86XK_AudioLowerVolume,	spawn,		SHCMD("pamixer -d 2; kill -34 $(cat ~/.cache/pidofbar)") },
 
-        { MODKEY,			XK_p,		spawn,		{.v = (const char*[]){ "mpc", "toggle", NULL } } },	
+        { MODKEY,			XK_p,		spawn,		{.v = (const char*[]){ "mpc", "toggle", NULL } } },
         { MODKEY|ShiftMask,		XK_comma,	spawn,		{.v = (const char*[]){ "mpc", "prev", NULL } } },
 	{ MODKEY|ShiftMask,		XK_period,	spawn,		{.v = (const char*[]){ "mpc", "next", NULL } } },
 	{ MODKEY,                       XK_comma,	spawn,		{.v = (const char*[]){ "mpc", "seek", "-10", NULL } } },
