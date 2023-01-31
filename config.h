@@ -123,9 +123,18 @@ static Key keys[] = {
         { 0,				XK_Print,	spawn,	   SHCMD("maimshot") },
 	{ MODKEY,	        	XK_Escape,	spawn,	   SHCMD("system_action") },
         { MODKEY,			XK_m,		spawn,     {.v = (const char*[]){ TERMINAL, "-e", "ncmpcpp", NULL } } },
+        { 0, XF86XK_AudioMute,		spawn,		SHCMD("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle; kill -34 $(cat ~/.cache/pidofbar") },
 	{ 0, XF86XK_AudioMute,		spawn,		SHCMD("pamixer -t; kill -34 $(cat ~/.cache/pidofbar") },
 	{ 0, XF86XK_AudioRaiseVolume,	spawn,		SHCMD("pamixer -i 2; kill -34 $(cat ~/.cache/pidofbar)") },
 	{ 0, XF86XK_AudioLowerVolume,	spawn,		SHCMD("pamixer -d 2; kill -34 $(cat ~/.cache/pidofbar)") },
+        { 0, XF86XK_AudioPrev,		spawn,		{.v = (const char*[]){ "mpc", "prev", NULL } } },
+	{ 0, XF86XK_AudioNext,		spawn,		{.v = (const char*[]){ "mpc",  "next", NULL } } },
+	{ 0, XF86XK_AudioPause,		spawn,		{.v = (const char*[]){ "mpc", "pause", NULL } } },
+	{ 0, XF86XK_AudioPlay,		spawn,		{.v = (const char*[]){ "mpc", "play", NULL } } },
+	{ 0, XF86XK_AudioStop,		spawn,		{.v = (const char*[]){ "mpc", "stop", NULL } } },
+	{ 0, XF86XK_AudioRewind,	spawn,		{.v = (const char*[]){ "mpc", "seek", "-10", NULL } } },
+	{ 0, XF86XK_AudioForward,	spawn,		{.v = (const char*[]){ "mpc", "seek", "+10", NULL } } },
+
 
         { MODKEY,			XK_p,		spawn,		{.v = (const char*[]){ "mpc", "toggle", NULL } } },
         { MODKEY|ShiftMask,		XK_comma,	spawn,		{.v = (const char*[]){ "mpc", "prev", NULL } } },
