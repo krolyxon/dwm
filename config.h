@@ -121,8 +121,12 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,           quit,      {0} },
         { 0,				XK_Print,	spawn,	   SHCMD("maimshot") },
-	{ MODKEY,	        	XK_Escape,	spawn,	   SHCMD("system_action") },
         { MODKEY,			XK_m,		spawn,     {.v = (const char*[]){ TERMINAL, "-e", "ncmpcpp", NULL } } },
+	{ MODKEY,			XK_Escape,	spawn,		{.v = (const char*[]){ "sysact", NULL } } },
+	{ MODKEY|ShiftMask,		XK_Escape,	spawn,		{.v = (const char*[]){ "sysact", NULL } } },
+
+
+        // Audio related keymaps
 	{ 0, XF86XK_AudioMute,		spawn,		SHCMD("pamixer -t;kill -44 $(pidof dwmblocks") },
 	{ 0, XF86XK_AudioRaiseVolume,	spawn,		SHCMD("pamixer -i 2;kill -44 $(pidof dwmblocks)") },
 	{ 0, XF86XK_AudioLowerVolume,	spawn,		SHCMD("pamixer -d 2;kill -44 $(pidof dwmblocks)") },
