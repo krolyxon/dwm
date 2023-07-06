@@ -123,7 +123,6 @@ static Key keys[] = {
         { 0,				XK_Print,	spawn,	   SHCMD("maimshot") },
 	{ MODKEY,	        	XK_Escape,	spawn,	   SHCMD("system_action") },
         { MODKEY,			XK_m,		spawn,     {.v = (const char*[]){ TERMINAL, "-e", "ncmpcpp", NULL } } },
-        { 0, XF86XK_AudioMute,		spawn,		SHCMD("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle; kill -44 $(pidof dwmblocks") },
 	{ 0, XF86XK_AudioMute,		spawn,		SHCMD("pamixer -t;kill -44 $(pidof dwmblocks") },
 	{ 0, XF86XK_AudioRaiseVolume,	spawn,		SHCMD("pamixer -i 2;kill -44 $(pidof dwmblocks)") },
 	{ 0, XF86XK_AudioLowerVolume,	spawn,		SHCMD("pamixer -d 2;kill -44 $(pidof dwmblocks)") },
