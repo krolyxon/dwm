@@ -77,6 +77,7 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,			XK_grave,  spawn,	   {.v = (const char*[]){ "dmenuunicode", NULL } } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = dmenucmd } },
+        { MODKEY|ShiftMask,		XK_p,		spawn,		{.v = (const char*[]){ "passmenu", NULL } } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_Return, togglescratch,  {.v = scratchpadcmd } },
         { MODKEY,                       XK_F5,     xrdb,           {.v = NULL } },
