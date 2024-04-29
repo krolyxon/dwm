@@ -122,7 +122,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,           quit,      {0} },
         { 0,				XK_Print,	spawn,	   SHCMD("maimshot") },
-        { MODKEY,			XK_m,		spawn,     {.v = (const char*[]){ TERMINAL, "-e", "ncmpcpp", NULL } } },
+        { MODKEY,			XK_m,		spawn,     {.v = (const char*[]){ TERMINAL, "-e", "rmptui", NULL } } },
 	{ MODKEY,			XK_Escape,	spawn,		{.v = (const char*[]){ "sysact", NULL } } },
 	{ MODKEY|ShiftMask,		XK_Escape,	spawn,		{.v = (const char*[]){ "sysact", NULL } } },
 
