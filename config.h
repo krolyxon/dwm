@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* Constants */
-#define BROWSER "librewolf"
+#define BROWSER "brave"
 #define TERMINAL "run_alacritty"
 
 /* appearance */
@@ -25,7 +25,7 @@ static char *colors[][3] = {
 [SchemeSel]  = { selfgcolor,  selbgcolor,  selbordercolor  },
 };
 /* tagging */
-//static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+/*static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };*/
 static const char *tags[] = { " ", " ", " ", " ", " ", " ", " ", " ", " " };
 
 static const Rule rules[] = {
